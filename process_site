@@ -4,11 +4,13 @@ import json
 
 prefix = {"author":"Arijit Roy","website":"https://iamarijit.tk","source":"https://www.mygov.in/covid-19"}
 
-site = requests.get("https://www.mygov.in/covid-19")
 
-soup = BeautifulSoup(site.content,'html.parser')
 
 def fetchTotalData():
+
+    site = requests.get("https://www.mygov.in/covid-19")
+
+    soup = BeautifulSoup(site.content,'html.parser')
 
     india_active_case = soup.findAll(class_ = "iblock active-case")[0].findAll(class_="icount")[0].get_text()
 
@@ -34,6 +36,10 @@ def fetchTotalData():
 
 
 def fetchStatewiseData():
+
+    site = requests.get("https://www.mygov.in/covid-19")
+
+    soup = BeautifulSoup(site.content,'html.parser')
 
     state_list = soup.find(class_ = "marquee_data view-content").findAll(class_ = "views-row")
 
