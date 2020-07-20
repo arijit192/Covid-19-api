@@ -1,5 +1,5 @@
 from flask import Flask
-from App import fetchTotalData,fetchStatewiseData
+from process_site import fetchTotalData,fetchStatewiseData
 
 app = Flask(__name__)
 
