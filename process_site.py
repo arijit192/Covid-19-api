@@ -30,7 +30,7 @@ def fetchTotalData():
 
     total.append({"active": india_active_case,"recovered": india_recovered,"deaths": india_deaths,"Testing count till now": india_testing_count_till_now,"Latest test date":india_latest_test_day,"Tests on latest day": india_testing_latest_day})
 
-    total = json.dumps(total).strip("[ ]")
+    total = json.dumps(total)
 
     return total
 
@@ -54,6 +54,6 @@ def fetchStatewiseData():
         "death": state_list[i].find(class_ ="st_all_counts").find(class_ = "tick-death").find("small").get_text()
         })
 
-    list_statewise = json.dumps(list_statewise).strip("[]")
+    list_statewise = json.dumps(list_statewise)
 
     return list_statewise
