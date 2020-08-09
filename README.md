@@ -1,4 +1,4 @@
-# Covid-19-api
+# Covid-19-API
 
 I built this API so that everyone including me can take the advantage of realtime covid data to create awareness app and websites through which people can have an understanding of the current scenario.
 
